@@ -1,5 +1,5 @@
 ---
-title: "Análisis del caso Titanic"
+title: "Feature Engineering y modelo base"
 date: 2025-08-31
 ---
 
