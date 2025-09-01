@@ -118,6 +118,7 @@ plt.show()
 ![alt text](../assets/Entrega1Img4.png)
 ![alt text](../assets/Entrega1Img5.png)
 ![alt text](../assets/Entrega1Img6.png)
+
 [Collab](https://colab.research.google.com/drive/1pPy0z7iXiPlUJPnAvwRUXLwEoX6t_Aun?usp=sharing)
 
 ## Reflexión

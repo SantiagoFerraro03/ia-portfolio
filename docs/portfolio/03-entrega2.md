@@ -120,6 +120,7 @@ print(confusion_matrix(y_test, pred))
 
 ## Evidencias
 ![alt text](../assets/Entrega2Img1.png)
+
 [Collab](https://colab.research.google.com/drive/1lEsXMWq7gRSv3R0i90mMkNZ8TXO_BH0v?usp=sharing)
 
 ## Investigación de componentes Scikit-learn
@@ -197,7 +198,7 @@ Permite ver los verdaderos positivos, falsos positivos, falsos negativos y verda
 
 ## Reflexión
 
-# **Preguntas:**
+### **Preguntas:**
 
 **Matriz de confusión**: ¿En qué casos se equivoca más el modelo: cuando predice que una persona sobrevivió y no lo hizo, o al revés?
 
