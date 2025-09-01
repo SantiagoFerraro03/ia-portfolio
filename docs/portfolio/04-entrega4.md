@@ -4,14 +4,14 @@ date: 2025-08-31
 ---
 
 ## Contexto
-Se evaluaron 2 casos de negocio para el uso del modelo de regresión lineal, y el modelo de regreisión logistica. Primero para la regresión lineal se buscara estimar el valor medio de precio de casas para una inmobiliaria de Boston, y para la regresión logistica se buscara hacer un diagnostico medico para clasificar tumores en benignos o malignos.
+Se evaluaron 2 casos de negocio para el uso del modelo de regresión lineal y del modelo de regresión logística. Primero, para la regresión lineal se buscará estimar el valor medio de precio de casas para una inmobiliaria de Boston, y para la regresión logística se buscará hacer un diagnóstico médico para clasificar tumores en benignos o malignos.
 
 ## Objetivos
-- Aprender a cargar y explorar datos
-- Implementar regresión lineal paso a paso
-- Implementar regresión logística paso a paso
-- Interpretar resultados de forma simple
-- Evaluar la aplicación de los modelos en sus respectivos casos
+- Aprender a cargar y explorar datos.
+- Implementar regresión lineal paso a paso.
+- Implementar regresión logística paso a paso.
+- Interpretar resultados de forma simple.
+- Evaluar la aplicación de los modelos en sus respectivos casos.
 
 ## Actividades (con tiempos estimados)
 - Investigación del caso — 15 min  
@@ -21,11 +21,11 @@ Se evaluaron 2 casos de negocio para el uso del modelo de regresión lineal, y e
 - Documentación de los hallazgos — 25 min  
 
 ## Desarrollo
-Primero se leyeron las documentaciones necesarias para el uso de los modelos, el uso y significado de las metricas utilizadas, y la división en partes de test y training data. 
+Primero se leyó la documentación necesaria para el uso de los modelos, el uso y significado de las métricas utilizadas, y la división en partes de test y training data.  
 
-Posteriormente para cada caso se evaluo el contexto del negocio, y se empezo la implementación del codigo.
+Posteriormente, para cada caso se evaluó el contexto del negocio y se empezó la implementación del código.
 
-Primero se hicieron las importaciones necesarias (Setup):
+Primero se hicieron las importaciones necesarias (setup):
 
 ```python hl_lines="2 6" linenums="1"
 # Importar librerías que vamos a usar
@@ -42,7 +42,7 @@ from sklearn.datasets import load_breast_cancer
 print("✅ Setup completo!")
 ```
 
-Luego se comenzo por el primer caso de negocio que fue el de la inmobiliaria de Boston, se cargo el dataet a partir de la URL, exploramos la forma d elos datos, sus columnas, y nos centramos en separar los datos en X e y sobre la columna medv que es el precio de las casas que queremos predecir (Extrayendo de los datos medv para X, y dejando solo medv para y):
+Luego se comenzó por el primer caso de negocio que fue el de la inmobiliaria de Boston, se cargó el dataset a partir de la URL, exploramos la forma de los datos, sus columnas, y nos centramos en separar los datos en X e y sobre la columna medv que es el precio de las casas que queremos predecir (extrayendo de los datos medv para X, y dejando solo medv para y):
 
 ```python hl_lines="2 6" linenums="1"
 # === CARGAR DATOS DE CASAS EN BOSTON ===
@@ -70,7 +70,7 @@ print(f"🎯 Queremos predecir: Precio de casas en miles de USD")
 print(f"📈 Precio mínimo: ${y.min():.1f}k, Precio máximo: ${y.max():.1f}k")
 ```
 
-Posteriormente se dividieron lso datos en test y train, entrenamos al modelo, hicimos las predicciones, y evaluamos el modelo en las distintas metricas MAE, MSE, RMSE, R2, MAPE, se obtuvieron ciertas interpretaciones a partir de dichas metricas y se hizo una comparación de lo predicho para las primeras 5 casas vs el valor real.
+Posteriormente se dividieron los datos en test y train, entrenamos al modelo, hicimos las predicciones, y evaluamos el modelo en las distintas métricas MAE, MSE, RMSE, R², MAPE. Se obtuvieron ciertas interpretaciones a partir de dichas métricas y se hizo una comparación de lo predicho para las primeras 5 casas vs el valor real.
 
 ```python hl_lines="2 6" linenums="1"
 # === ENTRENAR MODELO DE REGRESIÓN LINEAL ===
@@ -121,11 +121,11 @@ for i in range(5):
     print(f"   Casa {i+1}: Real ${real:.1f}k vs Predicho ${predicho:.1f}k")
 ```
 
-Luego se continuo con el segundo caso de uso, los diagnosticos medicos de cancer, en benigno o maligno, usando la regresión logistica.
+Luego se continuó con el segundo caso de uso, los diagnósticos médicos de cáncer, en benigno o maligno, usando la regresión logística.
 
-Primero se cargaron el dataset, y se convirtieron en DataFrames para ser mas legibles, se imprimieron ciertas caracteristicas como el numero de pacientes, las caracteristicas que teniamos, y nuestro objetivo a predecir.
+Primero se cargó el dataset y se convirtió en DataFrame para ser más legible; se imprimieron ciertas características como el número de pacientes, las características que teníamos y nuestro objetivo a predecir.
 
-Por ultimo se vio el balance de las clases, observando que hay mas casos de cancer benignos que malignos, para ver las proporciones.
+Por último se vio el balance de las clases, observando que hay más casos de cáncer benignos que malignos, para ver las proporciones.
 
 ```python hl_lines="2 6" linenums="1"
 # === CARGAR DATOS DE DIAGNÓSTICO DE CÁNCER ===
@@ -151,9 +151,9 @@ print(f"   ❌ Casos malignos: {casos_malignos}")
 print(f"   ✅ Casos benignos: {casos_benignos}")
 ```
 
-Por ultimo al igual que con el primer caso de uso, dividimos los datos en train y test, creamos y entrenamos el modelo de regresión logistica, hacemos las predicciones, evaluamos multiples metricas, en este caso de clasificación, como lo son accuracy, precision, recall, y f1-score, mostramos la matriz de confusión con los VN, FP, FN, y VP.
+Por último, al igual que con el primer caso de uso, dividimos los datos en train y test, creamos y entrenamos el modelo de regresión logística, hicimos las predicciones y evaluamos múltiples métricas, en este caso de clasificación, como lo son accuracy, precision, recall y f1-score. Mostramos la matriz de confusión con los VN, FP, FN y VP.
 
-Generamos el classification report para obtener un reporte mas detallado de las metricas mencionadas y los avg. Se hicieron ciertas interpretaciones a partir de los datos obtenidos de las metricas, y por ultimo llegamos a ver ciertos ejemplso especificos de los primeros 5 pacientes lo predicho, versus la realidad.
+Generamos el classification report para obtener un reporte más detallado de las métricas mencionadas y los promedios (avg). Se hicieron ciertas interpretaciones a partir de los datos obtenidos de las métricas y, por último, llegamos a ver ciertos ejemplos específicos de los primeros 5 pacientes: lo predicho versus la realidad.
 
 ```python hl_lines="2 6" linenums="1"
 # === ENTRENAR MODELO DE CLASIFICACIÓN ===
