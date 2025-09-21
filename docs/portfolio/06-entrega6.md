@@ -349,6 +349,7 @@ for col in X_raw.columns:
 No se encontraron datos faltantes, lo cual es perfecto.
 
 ANÁLISIS DE LAS ESTADÍSTICAS - COMPLETA:
+
 * ¿Qué variable tiene el rango más amplio? Annual Income (k$)
 * ¿Cuál es la distribución de género en el dataset? 40% hombres 60% mujeres
 * ¿Qué variable muestra mayor variabilidad (std)? Annual Income (k$)
@@ -361,6 +362,7 @@ ANÁLISIS DE LAS ESTADÍSTICAS - COMPLETA:
 Despues del analisis se empezo a prepar los datos para el modelado, primero con la normalización, se probaron 3 scalers distintos para hallar cual seria el mejor para el dataset que poseemos.
 
 Se probaron:
+
 * MinMax Scaler
 * Standard Scaler
 * Robust Scaler
