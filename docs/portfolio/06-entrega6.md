@@ -9,6 +9,7 @@ Los centros comerciales necesitan comprender mejor el comportamiento de sus clie
 Se utilizará el **Mall Customer Segmentation Dataset** de Kaggle, que contiene información real de aproximadamente 200 clientes con datos completos sobre CustomerID, género, edad, ingreso anual y puntuación de gasto (Spending Score)
 
 ## Objetivos
+
 - Identificar 3-5 segmentos de clientes distintos usando K-Means 
 - Aplicar técnicas de normalización (MinMax, Standard, Robust)
 - Usar PCA para reducción de dimensionalidad y visualización 
@@ -17,6 +18,7 @@ Se utilizará el **Mall Customer Segmentation Dataset** de Kaggle, que contiene 
 - Encontrar audiencias objetivo para mejorar las estrategias de marketing.
 
 ## Actividades (con tiempos estimados)
+
 - Investigación del dataset — 15 min  
 - Investigación de los nuevos conceptos (Clustering, Scalers, PCA, Feature Selection,e tc) — 40 min  
 - Elaboración del código — 1h 30 min  
@@ -209,6 +211,7 @@ print(f"   {var}: {higher} tienen promedio más alto (diferencia: {diff:.1f})")
 #### Conclusiones del Análisis Exploratorio
 
 Se llegaron a ciertas conclusiones a partir de todas las observaciones:
+
 - ¿Qué variable tiene el rango más amplio? Annual Income (k$)
 - ¿Cuál es la distribución de género en el dataset? 40% hombres 60% mujeres
 - ¿Qué variable muestra mayor variabilidad (std)? Annual Income (k$)
@@ -282,21 +285,25 @@ X_raw = pd.concat([
 
 Se obtuvieron estos resultados:
 ANÁLISIS DE COLUMNAS PARA CLUSTERING:
+
 * Todas las columnas: ['CustomerID', 'Genre', 'Age', 'Annual Income (k$)', 'Spending Score (1-100)']
 * Numéricas: ['CustomerID', 'Age', 'Annual Income (k$)', 'Spending Score (1-100)']
 * Categóricas: ['Genre']
 
 SELECCIÓN DE FEATURES:
+
 * Excluidas: ['CustomerID'] (no informativas)
 * Numéricas: ['Age', 'Annual Income (k$)', 'Spending Score (1-100)']
 * Categóricas: ['Genre'] (codificaremos)
 
 RESULTADO DE CODIFICACIÓN:
+
 * Categorías originales: ['Male' 'Female']
 * Columnas generadas: ['Genre_Female', 'Genre_Male']
 * Shape: (200, 1) → (200, 2)
 
 DATASET FINAL PARA CLUSTERING:
+
 * Shape: (200, 5)
 * Columnas: ['Age', 'Annual Income (k$)', 'Spending Score (1-100)', 'Genre_Female', 'Genre_Male']
 * Variables numéricas: ['Age', 'Annual Income (k$)', 'Spending Score (1-100)']
@@ -521,6 +528,7 @@ print(f"Listo para PCA y Feature Selection")
 ```
 
 Impacto en Clustering (K=4)
+
 - MinMax: Silhouette Score = 0.364
 - Standard: Silhouette Score = 0.332
 - Robust: Silhouette Score = 0.298
@@ -627,6 +635,7 @@ plt.show()
 
 Se llego a estos resultados:
 ANÁLISIS DE VARIANZA EXPLICADA:
+
 * PC1: 0.726 (72.6%) | Acumulada: 0.726 (72.6%)
 * PC2: 0.137 (13.7%) | Acumulada: 0.863 (86.3%)
 * PC3: 0.070 (7.0%) | Acumulada: 0.932 (93.2%)
@@ -634,15 +643,18 @@ ANÁLISIS DE VARIANZA EXPLICADA:
 * PC5: 0.000 (0.0%) | Acumulada: 1.000 (100.0%)
 
 DECISIÓN DE COMPONENTES:
+
    * Para retener 90% varianza: 3 componentes
    * Para retener 95% varianza: 4 componentes
    * Para visualización: 2 componentes (86.3% varianza)
 
 PCA aplicado:
+
    * Dimensiones: (200, 5) → (200, 2)
    * Varianza explicada: 86.3%
 
 INTERPRETACIÓN DE NEGOCIO:
+
 - PC1 parece representar: Diferencia por genero, basandonos en el loading, se puede ver que son los valores que mas impactan
 - PC2 parece representar: Contraste entre edad y nivel de gasto, por las mismas razones.
 - Los clusters visibles sugieren: Existen grupos de clientes separados principalmente por género, y dentro de cada género se diferencian por edad y comportamiento de gasto
@@ -824,6 +836,7 @@ A partir de esto se llegaron a las siguientes comparaciones y a un ganador.
 
 
 COMPARACIÓN DE MÉTODOS:
+
 * Baseline (todas): 0.364
 * Forward Selection: 0.573
 * Backward Elimination: 0.573
@@ -831,7 +844,8 @@ COMPARACIÓN DE MÉTODOS:
 
 **GANADOR: PCA (2D) con score = 0.686**
 
-* ANÁLISIS:
+ANÁLISIS:
+
 - PCA (2D): 0.686 (+88.3% vs baseline)
 - Forward Selection: 0.573 (+57.5% vs baseline)
 - Backward Elimination: 0.573 (+57.5% vs baseline)
@@ -920,6 +934,7 @@ print(f"   Silhouette Score: {best_score:.3f}")
 ![alt text](../assets/Entrega6Img1.png)
 
 ANÁLISIS:
+
 * Método con mejor score: PCA (2D) con score = 0.686
 * ¿Forward y Backward seleccionaron exactamente las mismas features? Si
 * ¿PCA con 2 componentes es competitivo? Si, es el mejor y supera a Backward y Forward
@@ -1034,16 +1049,19 @@ else:
 **Candidato por Silhouette:** K=2 (score=0.762)
 
 **DECISIÓN FINAL:**
+
 * Elbow sugiere K=6, Silhouette sugiere K=2
 * Considerando el contexto de negocio (3-5 segmentos esperados) elegimos K = 4 (balance elbow + contexto negocio)
 
 ENTRENANDO MODELO FINAL CON K=4
 Modelo entrenado:
+
 * Silhouette Score: 0.686
 * Clusters encontrados: 4
 * Inertia final: 3.78
 
 DISTRIBUCIÓN DE CLIENTES:
+
 * Cluster 0: 57 clientes (28.5%)
 * Cluster 1: 47 clientes (23.5%)
 * Cluster 2: 55 clientes (27.5%)
@@ -1246,7 +1264,9 @@ for cluster_id in sorted(df_customers['cluster'].unique()):
 ```
 
 ANÁLISIS SILHOUETTE DETALLADO:
+
    **Silhouette Score General: 0.686**
+
 - Cluster 0: μ=0.671, min=0.091, samples=57
 - Cluster 1: μ=0.659, min=0.156, samples=47
 - Cluster 2: μ=0.671, min=0.371, samples=55
@@ -1254,6 +1274,7 @@ ANÁLISIS SILHOUETTE DETALLADO:
 
 
 DETECCIÓN DE OUTLIERS EN CLUSTERING:
+
 - Cluster 0: Sin outliers detectados
 - Cluster 1: Sin outliers detectados
 - Cluster 2: Sin outliers detectados
