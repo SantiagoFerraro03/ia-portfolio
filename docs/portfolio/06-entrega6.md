@@ -1295,12 +1295,12 @@ PERFILES DETALLADOS POR CLUSTER:
       Spending Score: 70.2/100
 
 ## Evidencias
-![alt text](../assets/Entrega6Img4)
-![alt text](../assets/Entrega6Img5)
-![alt text](../assets/Entrega6Img6)
-![alt text](../assets/Entrega6Img7)
-![alt text](../assets/Entrega6Img8)
-![alt text](../assets/Entrega6Img9)
+![alt text](../assets/Entrega6Img4.png)
+![alt text](../assets/Entrega6Img5.png)
+![alt text](../assets/Entrega6Img6.png)
+![alt text](../assets/Entrega6Img7.png)
+![alt text](../assets/Entrega6Img8.png)
+![alt text](../assets/Entrega6Img9.png)
 
 [Collab](https://colab.research.google.com/drive/1mjdINA4M1QP2ziglYKkk1w-qe7X_tjDP?usp=sharing)
 
