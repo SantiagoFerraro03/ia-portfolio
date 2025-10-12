@@ -16,3 +16,4 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Entrega 5: [Entrega 5: Validación y Selección de Modelos - Fill in the Blanks](05-entrega5.md)
 - Entrega 6: [Clustering y PCA - Mall Customer Segmentation](06-entrega6.md)
 - Entrega 7: [Los limites del Perceptrón, y las posibilidades de las redes neuronales](07-entrega7.md)
+- Entrega 7: [Maximizando la precisión](08-entrega8.md)
