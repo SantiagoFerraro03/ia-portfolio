@@ -59,7 +59,7 @@ Pérdida: categorical_crossentropy
 
 ## Resultados
 
-![alt text](../assets/Entrega9Img1.png)
+![alt text](../assets/Entrega9Img1.jpeg)
 
 ### Accuracy Final en Test
 
