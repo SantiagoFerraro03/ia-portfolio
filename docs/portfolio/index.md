@@ -19,3 +19,4 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Entrega 8: [Maximizando la precisión](08-entrega8.md)
 - Entrega 9: [Comparación CNN simple vs Transfer Learning](09-entrega9.md)
 - Entrega 10: [Clasificación de flores con Transfer Learning y Explainability](10-entrega10.md)
+- Entrega 11: [Detectando productos usando fine-tuning con YOLOv8](11-entrega11.md)
