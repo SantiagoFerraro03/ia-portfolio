@@ -6,7 +6,7 @@ date: 2025-01-01
 # Portafolio
 
 Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas páginas numeradas
-(`01-...`, `02-...`).
+(01-..., 02-...).
 
 - Plantilla: [plantilla.md](plantilla.md)
 - Primera entrada: [01-primera-entrada.md](01-primera-entrada.md)
@@ -17,3 +17,4 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Entrega 6: [Clustering y PCA - Mall Customer Segmentation](06-entrega6.md)
 - Entrega 7: [Los limites del Perceptrón, y las posibilidades de las redes neuronales](07-entrega7.md)
 - Entrega 8: [Maximizando la precisión](08-entrega8.md)
+- Entrega 9: [Comparación CNN simple vs Transfer Learning](09-entrega9.md)
