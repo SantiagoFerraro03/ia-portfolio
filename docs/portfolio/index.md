@@ -21,3 +21,4 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Entrega 10: [Clasificación de flores con Transfer Learning y Explainability](10-entrega10.md)
 - Entrega 11: [Detectando productos usando fine-tuning con YOLOv8](11-entrega11.md)
 - Entrega 12: [Fine-tuning de SAM para Segmentación de Áreas de Inundación](12-entrega12.md)
+- Entrega 13: [Fine-tuning de Transformers para Clasificación de Sentimiento Financiero](13-entrega13.md)
