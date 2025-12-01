@@ -244,7 +244,7 @@ Respuesta: ### Planes de la Empresa
 - **Plan Starter**: $50
 - **Plan Pro**: $100
 - **Plan Enterprise**: $200
-- Para soporte técnico, puedes contactarlos por email: [soporte@empresa.com](soporte@empresa.com).
+- Para soporte técnico, puedes contactarlos por email: soporte@empresa.com.
 
 ### Estado del Sistema
 - El sistema está operativo normalmente.
