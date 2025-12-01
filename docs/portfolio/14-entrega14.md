@@ -317,6 +317,81 @@ Esto confirma que con la regla "infiere", va a inferir.
 5. El prompt estricto cumplió: cero inferencias.
 Se mantuvo pegado al contexto, lo cual es lo esperado.
 
+### Chatbot de Soporte “FAQ + WebSearch”
+
+Creamos un chatbot que apoye un área de soporte.
+
+**Resultado**
+
+Processing: How do I reset my password?
+
+✅ Response generated!
+
+{
+    "answer": "To reset your password, go to Settings > Account > Reset Password. You will receive an email with further instructions.",
+    "sources": "FAQ",
+    "confidence": "high"
+}
+
+------------------------------------------------------------
+
+
+Processing: What are the latest AI trends in 2024?
+
+✅ Response generated!
+
+{
+    "answer": "I'm sorry, but I am a support chatbot for Product X and do not have information on the latest AI trends in 2024. For more information on AI trends, I recommend checking reputable sources like industry reports, tech news websites, or consulting with AI experts.",
+    "sources": [],
+    "confidence": "low"
+}
+
+------------------------------------------------------------
+
+
+Processing: What integrations does Product X support?
+
+✅ Response generated!
+
+{
+    "answer": "Product X supports integrations with Slack, Google Drive, and Microsoft Teams.",
+    "sources": "Product X FAQ - Integrations section",
+    "confidence": "high"
+}
+
+------------------------------------------------------------
+
+### Cómo Funciona
+
+1. **Documentos de Ejemplo**
+   - 8 documentos de ejemplo sobre "Producto X" (una herramienta ficticia de gestión de proyectos)
+   - Indexados con FAISS usando embeddings de OpenAI
+   - Recupera los 3 fragmentos más relevantes para cada consulta
+
+2. **Lógica de Decisión**
+   - Si el contexto de las FAQ es suficiente (>50 caracteres), usa solo el conocimiento local (alta confianza)
+   - Si las FAQ son insuficientes, activa búsqueda web con DuckDuckGo (confianza media/baja)
+
+3. **Estructura de Respuesta**
+   - Usa modelos Pydantic para definir el formato de salida JSON
+   - Devuelve: respuesta, fuentes (título + URL), nivel de confianza
+
+4. **Parámetros del Modelo**
+   - Modelo: GPT-3.5-turbo (rápido y económico)
+   - Temperature: 0.3 (equilibrio entre precisión y creatividad)
+   - Recuperación: 3 fragmentos principales de las FAQ
+
+### Instrucciones de Configuración
+
+- **Ejecutar Todas las Celdas**: Ejecuta el notebook de arriba a abajo
+- **Probar**: El script prueba automáticamente 3 preguntas de ejemplo
+
+### Personalización
+
+- **Agregar más FAQs**: Extiende la lista `faq_documents`
+- **Ajustar umbral**: Cambia el umbral de 50 caracteres para activar búsqueda web
+- **Modificar salida**: Actualiza el modelo Pydantic `BotResponse`
+
 ## Evidencias
 - [Collab](https://colab.research.google.com/drive/1MIwekmPWzHJyxlHs5u_SddaeWs-FOpdp?usp=sharing)
 
