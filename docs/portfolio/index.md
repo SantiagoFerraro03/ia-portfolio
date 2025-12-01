@@ -23,3 +23,4 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Entrega 12: [Fine-tuning de SAM para Segmentación de Áreas de Inundación](12-entrega12.md)
 - Entrega 13: [Fine-tuning de Transformers para Clasificación de Sentimiento Financiero](13-entrega13.md)
 - Entrega 14: [La fuerza de los LLMs con LangChain (OpenAI)](14-entrega14.md)
+- Entrega 15: [Agentes con LangGraph — RAG, Tools y Memoria Conversacional](15-entrega15.md)
