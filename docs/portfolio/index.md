@@ -24,3 +24,5 @@ Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas p�
 - Entrega 13: [Fine-tuning de Transformers para Clasificación de Sentimiento Financiero](13-entrega13.md)
 - Entrega 14: [La fuerza de los LLMs con LangChain (OpenAI)](14-entrega14.md)
 - Entrega 15: [Agentes con LangGraph — RAG, Tools y Memoria Conversacional](15-entrega15.md)
+- Entrega 16: [Introducción al entorno de Google Cloud](16-entrega16.md)
+- Entrega 17: [Vertex AI Pipelines: Qwik Start](17-entrega17.md)
