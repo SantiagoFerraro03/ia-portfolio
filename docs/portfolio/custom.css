@@ -103,21 +103,6 @@ ol li {
   font-size: 1.05rem;
 }
 
-pre code {
-  background: #004d5555;
-  color: #e0f7fa;
-  padding: 12px 14px;
-  display: block;
-  border-radius: 10px;
-  border: 1px solid #006064;
-  white-space: pre-wrap;
-  font-size: 0.95rem;
-}
-
-pre {
-  background: transparent;
-}
-
 img {
   max-width: 100%;
   display: block;
