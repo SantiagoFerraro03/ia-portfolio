@@ -3,18 +3,13 @@ title: "Índice del Portafolio"
 date: 2025-01-01
 ---
 
-<link rel="stylesheet" href="./custom.css">
+# Portafolio
 
-<div class="portfolio-container">
-  <div class="hero">
-    <div>
-      <h1>Portafolio</h1>
-      <p class="lead">A continuación se dispondra de múltiples entregas que abordan temas de la inteligencia artificial, desde el análisis de datos del caso del Titanic hasta la creación de modelos de clasificación y predicción.</p>
-    </div>
-  </div>
+Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas páginas numeradas
+(01-..., 02-...).
 
-<p class="lead">Descubre todo esto y mucho más entrando a los próximos recursos:</p>
-
+- Plantilla: [plantilla.md](plantilla.md)
+- Primera entrada: [01-primera-entrada.md](01-primera-entrada.md)
 - Entrega 1: [Analizando el Titanic](02-entrega1.md)
 - Entrega 2: [Analizando el Titanic (Feature Engineering / Baseline) Parte 2](03-entrega2.md)
 - Entrega 4: [Usos de la Regresión Lineal y Logística](04-entrega4.md)
@@ -31,4 +26,3 @@ date: 2025-01-01
 - Entrega 15: [Agentes con LangGraph — RAG, Tools y Memoria Conversacional](15-entrega15.md)
 - Entrega 16: [Introducción al entorno de Google Cloud](16-entrega16.md)
 - Entrega 17: [Vertex AI Pipelines: Qwik Start](17-entrega17.md)
-</div>
