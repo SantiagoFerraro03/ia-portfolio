@@ -101,4 +101,4 @@ Texto con una afirmación que requiere aclaración[^nota].
 
 ### Emojis y énfasis
 
-Resultados destacados :rocket: :sparkles: y conceptos `clave`.
+Resultados destacados :rocket: :sparkles: y conceptos **clave**.

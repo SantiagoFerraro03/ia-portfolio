@@ -9,9 +9,9 @@ En esta actividad se trabajó con **LangChain + OpenAI** para explorar el flujo 
 
 ## Objetivos
 
-- Instanciar modelos OpenAI con `ChatOpenAI` y controlar `temperature`, `max_tokens` y `top_p`.  
-- Diseñar prompts robustos con `ChatPromptTemplate` y componerlos con LCEL (`|`).  
-- Generar salidas estructuradas usando `with_structured_output` (JSON/Pydantic).  
+- Instanciar modelos OpenAI con **ChatOpenAI** y controlar **temperature**, **max_tokens** y **top_p**.  
+- Diseñar prompts robustos con **ChatPromptTemplate** y componerlos con LCEL (**|**).  
+- Generar salidas estructuradas usando **with_structured_output** (JSON/Pydantic).  
 - Medir tokens y latencia con LangSmith (tracing y callbacks).  
 - Implementar tareas guiadas: traducción determinista, resúmenes, Q&A condicionado al contexto.  
 - Comparar enfoques zero-shot vs few-shot.  
@@ -387,9 +387,9 @@ Processing: What integrations does Product X support?
 
 ### Personalización
 
-- **Agregar más FAQs**: Extiende la lista `faq_documents`
+- **Agregar más FAQs**: Extiende la lista **faq_documents**
 - **Ajustar umbral**: Cambia el umbral de 50 caracteres para activar búsqueda web
-- **Modificar salida**: Actualiza el modelo Pydantic `BotResponse`
+- **Modificar salida**: Actualiza el modelo Pydantic **BotResponse**
 
 ## Evidencias
 - [Collab](https://colab.research.google.com/drive/1MIwekmPWzHJyxlHs5u_SddaeWs-FOpdp?usp=sharing)

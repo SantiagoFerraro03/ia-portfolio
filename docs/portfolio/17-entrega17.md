@@ -11,7 +11,7 @@ En este laboratorio trabajé con **Vertex AI Pipelines**, la herramienta de Goog
 
 - Crear y ejecutar un pipeline básico de tres pasos usando el SDK de Kubeflow Pipelines (KFP).
 - Construir un pipeline completo de clasificación tabular usando AutoML.
-- Aprovechar componentes prearmados del paquete `google_cloud_pipeline_components`.
+- Aprovechar componentes prearmados del paquete **google_cloud_pipeline_components**.
 - Agregar lógica condicional para decidir automáticamente si un modelo se despliega o no.
 - Comparar ejecuciones y revisar métricas entre distintos runs.
 
@@ -32,11 +32,11 @@ En este laboratorio trabajé con **Vertex AI Pipelines**, la herramienta de Goog
 
 Arranqué creando una instancia nueva de JupyterLab desde Vertex AI Workbench. Instalé:
 
-- `kfp` (para definir pipelines)  
-- `google-cloud-pipeline-components`  
-- `google-cloud-aiplatform`  
+- **kfp** (para definir pipelines)  
+- **google-cloud-pipeline-components**  
+- **google-cloud-aiplatform**  
 
-Después del restart del kernel configuré las variables principales como `PROJECT_ID` y `BUCKET_NAME`, que usé para guardar artefactos y outputs.
+Después del restart del kernel configuré las variables principales como **PROJECT_ID** y **BUCKET_NAME**, que usé para guardar artefactos y outputs.
 
 #### Reflexión
 
@@ -55,7 +55,7 @@ Los tres pasos fueron:
 2. **emoji** — convierte una palabra tipo “sparkles” en ✨.  
 3. **build_sentence** — junta las salidas y arma una frase.
 
-Lo importante acá fue ver cómo el decorador `@component` envuelve cada función en un contenedor independiente, con sus propias dependencias. Esto facilita mucho cuando cada paso necesita un entorno distinto.
+Lo importante acá fue ver cómo el decorador **@component** envuelve cada función en un contenedor independiente, con sus propias dependencias. Esto facilita mucho cuando cada paso necesita un entorno distinto.
 
 Compilé el pipeline a JSON, lo subí a Vertex AI Pipelines y vi el grafo ejecutándose en tiempo real. El resultado final fue: **"Vertex AI Pipelines is ✨"**.
 
@@ -85,7 +85,7 @@ El segundo pipeline ya fue de verdad “realista”. Entrené un modelo de clasi
    - Comparó el AUC con un umbral (0.95).  
 
 4. **Despliegue condicional**  
-   Si el AUC superaba el umbral, el modelo se desplegaba automáticamente con `ModelDeployOp`.
+   Si el AUC superaba el umbral, el modelo se desplegaba automáticamente con **ModelDeployOp**.
 
 Mientras AutoML entrenaba, pude ver cómo Vertex AI manejaba todas las transformaciones y el tuning sin que yo escribiera casi nada de código manual.
 
@@ -94,7 +94,7 @@ Mientras AutoML entrenaba, pude ver cómo Vertex AI manejaba todas las transform
 #### Reflexión
 
 - **AutoML:** Para prototipar es excelente. Te permite validar ideas sin invertir tiempo en feature engineering o tuning profundo.
-- **Condicionales:** El `dsl.Condition()` le da inteligencia al pipeline. Podría usarse para automatizar reentrenamientos, alertas o decisiones de despliegue.
+- **Condicionales:** El **dsl.Condition()** le da inteligencia al pipeline. Podría usarse para automatizar reentrenamientos, alertas o decisiones de despliegue.
 - **Linaje:** Poder rastrear de qué dataset salió cada modelo o experimento es súper útil cuando se auditan resultados o se necesita reproducibilidad.
 
 ---

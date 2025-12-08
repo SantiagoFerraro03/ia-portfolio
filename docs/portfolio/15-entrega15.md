@@ -5,11 +5,11 @@
 
 ## Contexto
 
-En esta actividad se trabajó con **LangGraph + LangChain + OpenAI** para explorar la construcción de agentes conversacionales multi-turn que integran **LLM + tools**. Se recorrió el flujo completo desde el setup básico, diseño de un estado de agente (`AgentState`), integración de RAG como tool, hasta la creación de un grafo que orquesta el reasoning del LLM con herramientas externas. El objetivo fue comprender cómo LangGraph gestiona estados, cómo vincular herramientas externas de manera reusable, y cómo mantener un historial o resumen ligero de la conversación.
+En esta actividad se trabajó con **LangGraph + LangChain + OpenAI** para explorar la construcción de agentes conversacionales multi-turn que integran **LLM + tools**. Se recorrió el flujo completo desde el setup básico, diseño de un estado de agente (**AgentState**), integración de RAG como tool, hasta la creación de un grafo que orquesta el reasoning del LLM con herramientas externas. El objetivo fue comprender cómo LangGraph gestiona estados, cómo vincular herramientas externas de manera reusable, y cómo mantener un historial o resumen ligero de la conversación.
 
 ## Objetivos
 
-- Diseñar un estado de agente (`AgentState`) con historial de mensajes.  
+- Diseñar un estado de agente (**AgentState**) con historial de mensajes.  
 - Construir un agente con LangGraph que:
   - Use un modelo de chat OpenAI como reasoner.
   - Llame tools externas (RAG + otras).
@@ -21,9 +21,9 @@ En esta actividad se trabajó con **LangGraph + LangChain + OpenAI** para explor
 
 ## Actividades (con tiempos estimados)
 
-- Setup e instalación de paquetes (`langgraph`, `langchain`, `faiss-cpu`) — 10 min  
+- Setup e instalación de paquetes (**langgraph**, **langchain**, **faiss-cpu**) — 10 min  
 - Configuración de API keys y entorno — 5 min  
-- Definición del `AgentState` básico — 10 min  
+- Definición del **AgentState** básico — 10 min  
 - Implementación del nodo assistant y grafo mínimo — 20 min  
 - Extensión del estado con summary — 15 min  
 - Construcción de un RAG mini (FAISS + OpenAI embeddings) — 30 min  

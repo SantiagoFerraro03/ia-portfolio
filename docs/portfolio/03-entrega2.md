@@ -137,7 +137,7 @@ Parámetros:
 `penalty, dual, tol, C, fit_intercept, intercept_scaling, class_weight, random_state, solver, max_iter, multi_class, verbose, warm_start, n_jobs, l1_ratio`
 
 ***¿Cuándo usar solver='liblinear' vs otros solvers?***  
-Cuando el dataset es pequeño es una buena opción. Para datasets más grandes es mejor usar otros solvers más eficientes como `saga` y `sag`.
+Cuando el dataset es pequeño es una buena opción. Para datasets más grandes es mejor usar otros solvers más eficientes como **saga** y **sag**.
 
 ---
 
@@ -161,13 +161,13 @@ Sirve para ver si tu modelo en verdad es útil, o no sirve para nada. Lo compara
 ### train_test_split
 
 ***¿Qué hace el parámetro stratify?***  
-Si no es `None`, divide los datos conservando la proporción de clases según el vector `y`.
+Si no es **None**, divide los datos conservando la proporción de clases según el vector **y**.
 
 ***¿Por qué usar random_state?***  
 Establece una semilla para que la partición sea reproducible en distintos experimentos.
 
 ***¿Qué porcentaje de test es recomendable?***  
-Por defecto se usa un **25%** si no se indica en el parámetro `test_size` o `train_size`, pero por lo general se emplea entre **20% y 30%**.
+Por defecto se usa un **25%** si no se indica en el parámetro **test_size** o **train_size**, pero por lo general se emplea entre **20% y 30%**.
 
 ---
 

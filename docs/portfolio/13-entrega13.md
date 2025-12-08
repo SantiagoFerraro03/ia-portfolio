@@ -14,7 +14,7 @@ El objetivo fue realizar **análisis exploratorio (EDA)**, construir un **baseli
 
 ## Objetivos
 
-- Cargar y preprocesar datasets de texto con `datasets` y tokenizers.  
+- Cargar y preprocesar datasets de texto con **datasets** y tokenizers.  
 - Realizar EDA: distribución de clases, longitudes, n-grams, wordclouds, proyecciones TF-IDF y Word2Vec.  
 - Implementar un baseline con vectores TF-IDF y regresión logística.  
 - Aplicar fine-tuning de un modelo Transformer (FinBERT).  
