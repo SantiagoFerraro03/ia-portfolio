@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Validación y Selección de Modelos - Fill in the Blanks
 ## 2025-08-31

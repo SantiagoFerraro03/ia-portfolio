@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Clustering y PCA - Mall Customer Segmentation
 ## 2025-09-21

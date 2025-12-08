@@ -4,7 +4,7 @@ date: 2025-08-31
 ---
 
 
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Análisis del caso Titanic
 ## 2025-08-31

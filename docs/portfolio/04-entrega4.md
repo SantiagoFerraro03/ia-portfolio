@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Regresión Lineal y Logística
 ## 2025-08-31

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Feature Engineering y modelo base
 ## 2025-08-31
