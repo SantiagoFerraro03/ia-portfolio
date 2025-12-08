@@ -143,7 +143,7 @@ date: 2025-01-01
 
 # Acerca de mí
 
-<img src="image.png" alt="alt text" width="200">
+![alt text](image.png)
 
 Soy Santiago Ferraro tengo 22 años, y estoy en mi 5to año de ingenieria informatica en la UCU.
 
