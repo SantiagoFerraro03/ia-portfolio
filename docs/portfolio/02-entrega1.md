@@ -1,3 +1,9 @@
+---
+title: "Análisis del caso Titanic"
+date: 2025-08-31
+---
+
+
 <link rel="stylesheet" href="./custom.css">
 
 # Análisis del caso Titanic
