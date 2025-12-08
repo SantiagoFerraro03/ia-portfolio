@@ -3,6 +3,8 @@ title: "Portafolio — Inicio"
 date: 2025-01-01
 ---
 
+<link rel="stylesheet" href="../custom.css">
+
 # Portafolio — Inicio
 
 Bienvenido al portafolio del curso. Aquí documentarás tu progreso,

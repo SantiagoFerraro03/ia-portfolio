@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Fine-tuning de SAM para Segmentación de Áreas de Inundación
 ## 2025-11-10

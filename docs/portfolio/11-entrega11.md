@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Detectando productos usando fine-tuning con YOLOv8
 ## 2025-11-09

@@ -3,7 +3,7 @@ title: "Acerca de mí"
 date: 2025-01-01
 ---
 
-<link rel="stylesheet" href="./portfolio/custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Acerca de mí
 

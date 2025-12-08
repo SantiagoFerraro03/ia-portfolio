@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Comparación de CNN desde cero vs Transfer Learning
 ## 2025-11-09

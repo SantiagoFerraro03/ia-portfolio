@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # La fuerza de los LLMs con LangChain (OpenAI)
 ## 2025-11-30

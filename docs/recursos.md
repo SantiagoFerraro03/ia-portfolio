@@ -3,6 +3,8 @@ title: "Recursos útiles"
 date: 2025-01-01
 ---
 
+<link rel="stylesheet" href="../custom.css">
+
 # Recursos útiles
 
 - Guía del curso (enlace relativo si aplica)

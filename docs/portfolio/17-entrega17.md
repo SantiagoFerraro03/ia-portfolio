@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Vertex AI Pipelines: Qwik Start
 ## 2025-12-01

@@ -3,6 +3,8 @@ title: "Índice del Portafolio"
 date: 2025-01-01
 ---
 
+<link rel="stylesheet" href="../custom.css">
+
 # Portafolio
 
 Bienvenido a las entradas del portafolio. Usá la plantilla para crear nuevas páginas numeradas

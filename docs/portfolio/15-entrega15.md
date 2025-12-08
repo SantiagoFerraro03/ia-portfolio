@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Agentes con LangGraph — RAG, Tools y Memoria Conversacional
 ## 2025-11-30

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./custom.css">
+<link rel="stylesheet" href="../custom.css">
 
 # Experimentando con Perceptrón y Redes Neuronales
 ## 2025-10-12
