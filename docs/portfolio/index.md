@@ -5,21 +5,6 @@ date: 2025-01-01
 
 <link rel="stylesheet" href="./custom.css">
 
-<style>
-  .portfolio-container{max-width:900px;margin:24px auto;padding:20px;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#0f172a}
-  .hero{display:flex;align-items:center;gap:18px}
-  .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,#6366f1,#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-  h1{margin:0;font-size:2rem}
-  p.lead{color:#334155;margin-top:8px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:18px}
-  .card{border-radius:10px;padding:12px 14px;background:#f8fafc;border:1px solid #e2e8f0;box-shadow:0 6px 18px rgba(15,23,42,0.04);text-decoration:none;color:inherit;transition:transform .12s ease,box-shadow .12s}
-  .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(15,23,42,0.08)}
-  .card h3{margin:0;font-size:1rem}
-  .meta{font-size:.85rem;color:#475569;margin-top:6px}
-  .footer{margin-top:22px;color:#64748b;font-size:.9rem}
-  @media (max-width:520px){.hero{flex-direction:column;align-items:flex-start}.logo{width:56px;height:56px}}
-</style>
-
 <div class="portfolio-container">
   <div class="hero">
     <div>
@@ -28,7 +13,7 @@ date: 2025-01-01
     </div>
   </div>
 
-  <p class="lead">Descubre todo esto y mucho más entrando a los próximos recursos:</p>
+<p class="lead">Descubre todo esto y mucho más entrando a los próximos recursos:</p>
 
 - Entrega 1: [Analizando el Titanic](02-entrega1.md)
 - Entrega 2: [Analizando el Titanic (Feature Engineering / Baseline) Parte 2](03-entrega2.md)
