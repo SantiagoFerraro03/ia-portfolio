@@ -1,7 +1,7 @@
----
-title: "Feature Engineering y modelo base"
-date: 2025-08-31
----
+<link rel="stylesheet" href="./custom.css">
+
+# Feature Engineering y modelo base
+## 2025-08-31
 
 ## Contexto
 Siguiendo con el caso del titanic, se trabaja con feature engineering y un modelo base, aprendiendo el uso de baselines, preparación de datos, etc.

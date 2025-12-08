@@ -1,7 +1,7 @@
----
-title: "Regresión Lineal y Logística"
-date: 2025-08-31
----
+<link rel="stylesheet" href="./custom.css">
+
+# Regresión Lineal y Logística
+## 2025-08-31
 
 ## Contexto
 Se evaluaron 2 casos de negocio para el uso del modelo de regresión lineal y del modelo de regresión logística. Primero, para la regresión lineal se buscará estimar el valor medio de precio de casas para una inmobiliaria de Boston, y para la regresión logística se buscará hacer un diagnóstico médico para clasificar tumores en benignos o malignos.

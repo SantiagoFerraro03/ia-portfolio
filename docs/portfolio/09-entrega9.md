@@ -1,7 +1,7 @@
----
-title: "Comparación de CNN desde cero vs Transfer Learning"
-date: 2025-11-09
----
+<link rel="stylesheet" href="./custom.css">
+
+# Comparación de CNN desde cero vs Transfer Learning
+## 2025-11-09
 
 ## Contexto
 

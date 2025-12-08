@@ -1,7 +1,7 @@
----
-title: "Agentes con LangGraph — RAG, Tools y Memoria Conversacional"
-date: 2025-11-30
----
+<link rel="stylesheet" href="./custom.css">
+
+# Agentes con LangGraph — RAG, Tools y Memoria Conversacional
+## 2025-11-30
 
 ## Contexto
 

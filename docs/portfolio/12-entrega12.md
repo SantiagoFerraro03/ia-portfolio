@@ -1,7 +1,7 @@
----
-title: "Fine-tuning de SAM para Segmentación de Áreas de Inundación"
-date: 2025-11-10
----
+<link rel="stylesheet" href="./custom.css">
+
+# Fine-tuning de SAM para Segmentación de Áreas de Inundación
+## 2025-11-10
 
 ## Contexto
 

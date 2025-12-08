@@ -1,7 +1,7 @@
----
-title: "Vertex AI Pipelines: Qwik Start"
-date: 2025-11-30
----
+<link rel="stylesheet" href="./custom.css">
+
+# Vertex AI Pipelines: Qwik Start
+## 2025-12-01
 
 ## Contexto
 

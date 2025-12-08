@@ -1,7 +1,7 @@
----
-title: "Maximizando la precisión"
-date: 2025-10-12
----
+<link rel="stylesheet" href="./custom.css">
+
+# Maximizando la precisión
+## 2025-10-12
 
 ## Contexto
 CIFAR-10 es un dataset con 50,000 imágenes de entrenamiento, 10,000 de test, y 10 clases. Este dataset será de ayuda para la evaluación de mejores configuraciones y uso de optimizadores para llegar a la mayor accuracy posible en la clasificación de estas imágenes.

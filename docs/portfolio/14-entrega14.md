@@ -1,8 +1,7 @@
----
-title: "La fuerza de los LLMs con LangChain (OpenAI)"
-date: 2025-11-30
----
+<link rel="stylesheet" href="./custom.css">
 
+# La fuerza de los LLMs con LangChain (OpenAI)
+## 2025-11-30
 
 ## Contexto
 

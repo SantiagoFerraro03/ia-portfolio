@@ -1,7 +1,7 @@
----
-title: "Clustering y PCA - Mall Customer Segmentation"
-date: 2025-09-21
----
+<link rel="stylesheet" href="./custom.css">
+
+# Clustering y PCA - Mall Customer Segmentation
+## 2025-09-21
 
 ## Contexto
 Los centros comerciales necesitan comprender mejor el comportamiento de sus clientes para optimizar sus estrategias de marketing y maximizar la rentabilidad. Sin una segmentación adecuada, las campañas resultan genéricas y poco efectivas, desperdiciando recursos en audiencias incorrectas.

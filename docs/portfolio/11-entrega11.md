@@ -1,7 +1,7 @@
----
-title: "Detectando productos usando fine-tuning con YOLOv8"
-date: 2025-11-09
----
+<link rel="stylesheet" href="./custom.css">
+
+# Detectando productos usando fine-tuning con YOLOv8
+## 2025-11-09
 
 ## Contexto
 

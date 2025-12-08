@@ -1,7 +1,7 @@
----
-title: "Fine-tuning de Transformers para Clasificación de Sentimiento Financiero"
-date: 2025-11-30
----
+<link rel="stylesheet" href="./custom.css">
+
+# Fine-tuning de Transformers para Clasificación de Sentimiento Financiero
+## 2025-11-30
 
 ## Contexto
 

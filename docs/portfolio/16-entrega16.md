@@ -1,8 +1,7 @@
----
-title: "Introducción al entorno de Google Cloud"
-date: 2025-12-01
----
+<link rel="stylesheet" href="./custom.css">
 
+# Introducción al entorno de Google Cloud
+## 2025-12-01
 
 ## Contexto
 Este laboratorio introductorio se realizó en la plataforma Google Cloud Skills Boost, utilizando un entorno temporal provisto por Qwiklabs. El objetivo fue familiarizarse con la consola de Google Cloud, comprender el funcionamiento del acceso con credenciales temporales, y reconocer elementos clave como proyectos, paneles de navegación y roles de IAM.

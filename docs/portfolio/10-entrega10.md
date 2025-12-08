@@ -1,7 +1,7 @@
----
-title: "Clasificación de flores con Transfer Learning y Explainability"
-date: 2025-11-09
----
+<link rel="stylesheet" href="./custom.css">
+
+# Clasificación de flores con Transfer Learning y Explainability
+## 2025-11-09
 
 ## Contexto
 

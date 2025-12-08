@@ -1,7 +1,7 @@
----
-title: "Validación y Selección de Modelos - Fill in the Blanks"
-date: 2025-08-31
----
+<link rel="stylesheet" href="./custom.css">
+
+# Validación y Selección de Modelos - Fill in the Blanks
+## 2025-08-31
 
 ## Contexto
 Se utilizará el dataset **Student Dropout and Academic Success** para el uso de *pipelines*, haciendo una evaluación y validación cruzada del modelo, con el objetivo de obtener métricas de estabilidad.

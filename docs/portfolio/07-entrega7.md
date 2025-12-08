@@ -1,7 +1,7 @@
----
-title: "Experimentando con Perceptrón y Redes Neuronales"
-date: 2025-10-12
----
+<link rel="stylesheet" href="./custom.css">
+
+# Experimentando con Perceptrón y Redes Neuronales
+## 2025-10-12
 
 ## Contexto
 Se requiere revelar las posibles limitaciones que tengan estos modelos a la hora de representar un problema o caso. Para ello, se observó en los perceptrones y redes neuronales cómo se vería la aplicación de cierta lógica booleana, y si son capaces de representarla en su totalidad.

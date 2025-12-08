@@ -1,9 +1,10 @@
----
-title: "Análisis del caso Titanic"
-date: 2025-08-31
----
+<link rel="stylesheet" href="./custom.css">
+
+# Análisis del caso Titanic
+## 2025-08-31
 
 ## Contexto
+
 El Titanic fue una tragedia en la cual un barco chocó contra un iceberg en el mar, resultando en muchas pérdidas. El dataset que se usará en esta actividad posee datos relevantes que nos pueden ayudar a discernir si hubo variables que afectaron la probabilidad de supervivencia de los tripulantes.
 
 ## Objetivos
@@ -12,6 +13,7 @@ El Titanic fue una tragedia en la cual un barco chocó contra un iceberg en el m
 - Formular hipótesis de interés para comprobar en un futuro.
 
 ## Actividades (con tiempos estimados)
+
 - Investigación del caso — 10 min  
 - Observación del dataset — 10 min  
 - Elaboración del código — 20 min  
