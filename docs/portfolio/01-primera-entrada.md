@@ -19,7 +19,7 @@ Actividad inicial del curso.
 Descripción breve de lo realizado.
 
 ## Evidencias
-- Enlace a material o capturas en **docs/assets/**
+- Enlace a material o capturas en docs/assets/
 
 ## Reflexión
 Lo más desafiante, lo más valioso, próximos pasos.

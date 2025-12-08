@@ -9,7 +9,7 @@ En esta actividad se trabajó con **LangGraph + LangChain + OpenAI** para explor
 
 ## Objetivos
 
-- Diseñar un estado de agente (**AgentState**) con historial de mensajes.  
+- Diseñar un estado de agente (AgentState) con historial de mensajes.  
 - Construir un agente con LangGraph que:
   - Use un modelo de chat OpenAI como reasoner.
   - Llame tools externas (RAG + otras).
@@ -21,9 +21,9 @@ En esta actividad se trabajó con **LangGraph + LangChain + OpenAI** para explor
 
 ## Actividades (con tiempos estimados)
 
-- Setup e instalación de paquetes (**langgraph**, **langchain**, **faiss-cpu**) — 10 min  
+- Setup e instalación de paquetes (langgraph, langchain, faiss-cpu) — 10 min  
 - Configuración de API keys y entorno — 5 min  
-- Definición del **AgentState** básico — 10 min  
+- Definición del AgentState básico — 10 min  
 - Implementación del nodo assistant y grafo mínimo — 20 min  
 - Extensión del estado con summary — 15 min  
 - Construcción de un RAG mini (FAISS + OpenAI embeddings) — 30 min  
@@ -241,9 +241,9 @@ Respuesta: El horario de atención es de lunes a viernes de 9:00 a 18:00. Si nec
 ---
 === PRUEBA 3: Consulta múltiple ===
 Respuesta: ### Planes de la Empresa
-- **Plan Starter**: $50
-- **Plan Pro**: $100
-- **Plan Enterprise**: $200
+- Plan Starter: $50
+- Plan Pro: $100
+- Plan Enterprise: $200
 - Para soporte técnico, puedes contactarlos por email: soporte@empresa.com.
 
 ### Estado del Sistema

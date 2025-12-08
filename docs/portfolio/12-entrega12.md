@@ -44,11 +44,11 @@ Se utilizó **SAM ViT-B** pre-entrenado en SA-1B con:
 
 ### Estrategia de Fine-tuning
 
-- **Congelado**: Image Encoder y Prompt Encoder
-- **Entrenable**: Mask Decoder únicamente
-- **Optimizador**: Adam con learning rate 1e-4
-- **Scheduler**: StepLR (reducción a la mitad cada 5 épocas)
-- **Loss**: Combinada BCE + Dice (50% cada una)
+- Congelado: Image Encoder y Prompt Encoder
+- Entrenable: Mask Decoder únicamente
+- Optimizador: Adam con learning rate 1e-4
+- Scheduler: StepLR (reducción a la mitad cada 5 épocas)
+- Loss: Combinada BCE + Dice (50% cada una)
 
 ## Resultados
 
@@ -93,22 +93,22 @@ Se utilizó **SAM ViT-B** pre-entrenado en SA-1B con:
 ![alt text](../assets/Entrega12image-1.png)
 
 El entrenamiento mostró:
-- **Pérdida**: Reducción consistente de ~0.35 a ~0.20
-- **IoU**: Mejora estable de ~0.64 a ~0.74
-- **Convergencia**: Estabilización alrededor de la época 10
-- **Sin overfitting**: Gap pequeño entre train y validation
+- Pérdida: Reducción consistente de ~0.35 a ~0.20
+- IoU: Mejora estable de ~0.64 a ~0.74
+- Convergencia: Estabilización alrededor de la época 10
+- Sin overfitting: Gap pequeño entre train y validation
 
 ## Análisis
 
 ### Efectividad de Diferentes Prompts
 
 **Point Prompts:**
-- **Muy pobres** en SAM pre-entrenado (IoU 0.001)
+- Muy pobres en SAM pre-entrenado (IoU 0.001)
 - Demasiado sensibles a la ubicación exacta
 - No aprenden contexto de inundaciones
 
 **Box Prompts:**
-- **Muy efectivos** incluso en SAM pre-entrenado (IoU 0.726)
+- Muy efectivos incluso en SAM pre-entrenado (IoU 0.726)
 - Más robustos para áreas irregulares
 - Mejor balance precision-recall
 
@@ -116,72 +116,72 @@ El entrenamiento mostró:
 
 El fine-tuning produjo mejoras significativas en:
 
-1. **Reducción de Falsos Positivos**: Precision aumentó a 0.952
-2. **Mejor Cobertura**: Recall mejoró en 47.81%
-3. **Consistencia**: Reducción en la desviación estándar de IoU
-4. **Calidad de Bordes**: Segmentaciones más precisas en límites agua-tierra
+1. Reducción de Falsos Positivos: Precision aumentó a 0.952
+2. Mejor Cobertura: Recall mejoró en 47.81%
+3. Consistencia: Reducción en la desviación estándar de IoU
+4. Calidad de Bordes: Segmentaciones más precisas en límites agua-tierra
 
 ### Desafíos Específicos de Segmentación de Inundaciones
 
-- **Reflejos y transparencias**: El agua refleja el entorno circundante
-- **Bordes difusos**: Transiciones graduales entre agua y tierra
-- **Objetos flotantes**: Vehículos y escombros alteran la superficie
-- **Variabilidad de profundidad**: Aguas someras vs profundas tienen apariencias diferentes
-- **Condiciones de iluminación**: Cambios drásticos según clima y hora
+- Reflejos y transparencias: El agua refleja el entorno circundante
+- Bordes difusos: Transiciones graduales entre agua y tierra
+- Objetos flotantes: Vehículos y escombros alteran la superficie
+- Variabilidad de profundidad: Aguas someras vs profundas tienen apariencias diferentes
+- Condiciones de iluminación: Cambios drásticos según clima y hora
 
 ## Conclusión
 
-1. **Fine-tuning Esencial**: SAM pre-entrenado tiene rendimiento limitado en dominios específicos como inundaciones, requiriendo adaptación especializada.
+1. Fine-tuning Esencial: SAM pre-entrenado tiene rendimiento limitado en dominios específicos como inundaciones, requiriendo adaptación especializada.
 
-2. **Superioridad de Box Prompts**: Los bounding boxes demostraron ser significativamente más efectivos que los points para segmentación de inundaciones, proporcionando mejor contexto espacial.
+2. Superioridad de Box Prompts: Los bounding boxes demostraron ser significativamente más efectivos que los points para segmentación de inundaciones, proporcionando mejor contexto espacial.
 
-3. **Mejora Cuantificable**: El fine-tuning produjo mejoras del ~49% en IoU y ~48% en recall, demostrando la efectividad de la adaptación de dominio.
+3. Mejora Cuantificable: El fine-tuning produjo mejoras del ~49% en IoU y ~48% en recall, demostrando la efectividad de la adaptación de dominio.
 
-4. **Estrategia Eficiente**: Congelar el image encoder mientras se entrena solo el mask decoder resultó en una estrategia balanceada entre eficiencia computacional y efectividad.
+4. Estrategia Eficiente: Congelar el image encoder mientras se entrena solo el mask decoder resultó en una estrategia balanceada entre eficiencia computacional y efectividad.
 
 ### Recomendaciones para Implementación en Producción
 
-- **Sistema Híbrido**: Combinar detección automática de áreas sospechosas con prompts manuales
-- **Post-procesamiento**: Implementar filtros morfológicos para conectar componentes de agua
-- **Múltiples Escalas**: Procesar imágenes a diferentes resoluciones
-- **Sistema de Confianza**: Incorporar métricas de confiabilidad por predicción
-- **Integración GIS**: Conectar con sistemas de información geográfica para análisis espacial
+- Sistema Híbrido: Combinar detección automática de áreas sospechosas con prompts manuales
+- Post-procesamiento: Implementar filtros morfológicos para conectar componentes de agua
+- Múltiples Escalas: Procesar imágenes a diferentes resoluciones
+- Sistema de Confianza: Incorporar métricas de confiabilidad por predicción
+- Integración GIS: Conectar con sistemas de información geográfica para análisis espacial
 
 # Preguntas de Reflexión
 
 ## ¿Por qué falla SAM pre-entrenado en inundaciones?
-- **Dominio diferente**: Entrenado en objetos discretos, no fenómenos naturales continuos
-- **Texturas homogéneas**: Confunde agua con cielos/superficies planas
-- **Evidencia**: Point prompts IoU 0.001 vs Box prompts IoU 0.726
+- Dominio diferente: Entrenado en objetos discretos, no fenómenos naturales continuos
+- Texturas homogéneas: Confunde agua con cielos/superficies planas
+- Evidencia: Point prompts IoU 0.001 vs Box prompts IoU 0.726
 
 ## ¿Qué componentes fine-tuneamos y por qué?
-- **Entrenable**: Mask decoder (4M parámetros)
-- **Congelado**: Image encoder (90M parámetros) + Prompt encoder
-- **Razón**: Eficiencia + evitar overfitting con dataset pequeño
+- Entrenable: Mask decoder (4M parámetros)
+- Congelado: Image encoder (90M parámetros) + Prompt encoder
+- Razón: Eficiencia + evitar overfitting con dataset pequeño
 
 ## Point vs Box prompts
-- **Point prompts**: IoU 0.001 - inútiles
-- **Box prompts**: IoU 0.726 - muy efectivos
-- **Diferencia**: 725x mejor performance con boxes
+- Point prompts: IoU 0.001 - inútiles
+- Box prompts: IoU 0.726 - muy efectivos
+- Diferencia: 725x mejor performance con boxes
 
 ## Mejoras post fine-tuning
-- **IoU**: +49.3% (0.500 → 0.747)
-- **Recall**: +47.8% (0.524 → 0.774)
-- **Precision**: 0.9532 (falsos positivos mínimos)
-- **Consistencia**: Menor desviación estándar
+- IoU: +49.3% (0.500 → 0.747)
+- Recall: +47.8% (0.524 → 0.774)
+- Precision: 0.9532 (falsos positivos mínimos)
+- Consistencia: Menor desviación estándar
 
 ## ¿Listo para deployment?
-- **No**: Faltan:
+- No: Faltan:
   - Testing en condiciones reales
   - Sistema de confianza/post-procesamiento
   - Integración con GIS/sistemas emergencia
   - Optimización para edge devices
 
 ## Estrategia con más/menos datos
-- **10x más datos**:
+- 10x más datos:
   - Descongelar image encoder parcialmente
   - Más épocas + data augmentation agresiva
-- **10x menos datos**:
+- 10x menos datos:
   - Few-shot learning + prompts inteligentes
   - Regularización fuerte + ensemble methods
 

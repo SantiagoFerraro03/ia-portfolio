@@ -147,11 +147,11 @@ Cuando el dataset es pequeño es una buena opción. Para datasets más grandes e
 Sirve como base para poder ser usado en comparaciones con otros clasificadores más complejos. Hace predicciones ignorando los inputs.
 
 ***¿Qué estrategias de baseline ofrece?***  
-- **most_frequent:** Devuelve la clase más frecuente, como un vector.  
-- **prior:** Devuelve la clase más frecuente, como valor de la distribución.  
-- **stratified:** Devuelve valores aleatorios.  
-- **uniform:** Devuelve valores de forma uniforme a partir de una lista de clases.  
-- **constant:** Devuelve siempre el mismo valor indicado por el usuario.  
+- most_frequent: Devuelve la clase más frecuente, como un vector.  
+- prior: Devuelve la clase más frecuente, como valor de la distribución.  
+- stratified: Devuelve valores aleatorios.  
+- uniform: Devuelve valores de forma uniforme a partir de una lista de clases.  
+- constant: Devuelve siempre el mismo valor indicado por el usuario.  
 
 ***¿Por qué es importante tener un baseline?***  
 Sirve para ver si tu modelo en verdad es útil, o no sirve para nada. Lo comparas con esa baseline a partir del dummy para verificar si tu modelo hace predicciones mejores que este.
@@ -176,25 +176,25 @@ Por defecto se usa un **25%** si no se indica en el parámetro **test_size** o *
 ***¿Qué significa cada métrica en classification_report?***  
 Para cada clase muestra: precisión, recall, f1-score y support.  
 También incluye:  
-- **accuracy (global)**  
-- **macro avg:** promedio simple por clase  
-- **weighted avg:** promedio ponderado por soporte (support)  
-- **micro avg (en algunos casos):** promedio global de todas las clases sin ponderación  
+- accuracy (global)  
+- macro avg: promedio simple por clase  
+- weighted avg: promedio ponderado por soporte (support)  
+- micro avg (en algunos casos): promedio global de todas las clases sin ponderación  
 
 **Definiciones:**  
-- **Precisión:** de todo lo que predijiste como positivo, ¿cuántos fueron realmente positivos?  
-- **Recall:** de todos los positivos reales, ¿cuántos encontraste?  
-- **F1-score:** media armónica de precisión y recall.  
-- **Support:** cantidad de muestras reales de cada clase.  
-- **Accuracy:** precisión global, es decir, del total de predicciones cuántas fueron correctas.  
+- Precisión: de todo lo que predijiste como positivo, ¿cuántos fueron realmente positivos?  
+- Recall: de todos los positivos reales, ¿cuántos encontraste?  
+- F1-score: media armónica de precisión y recall.  
+- Support: cantidad de muestras reales de cada clase.  
+- Accuracy: precisión global, es decir, del total de predicciones cuántas fueron correctas.  
 
 ***¿Cómo interpretar la matriz de confusión?***  
 Permite ver los verdaderos positivos, falsos positivos, falsos negativos y verdaderos negativos entre clases.
 
 ***¿Cuándo usar accuracy vs otras métricas?***  
-- Si la clase está balanceada y solo importa predecir el mayor número de valores correctos, **accuracy** es la mejor métrica.  
-- Si es importante tener en cuenta falsos positivos o falsos negativos (ejemplo: detección de enfermedades), puede ser más significativo usar **precisión** o **recall**.  
-- Si lo que interesa es un balance entre la detección de positivos y negativos, lo ideal es usar **f1-score**.  
+- Si la clase está balanceada y solo importa predecir el mayor número de valores correctos, accuracy es la mejor métrica.  
+- Si es importante tener en cuenta falsos positivos o falsos negativos (ejemplo: detección de enfermedades), puede ser más significativo usar precisión o recall.  
+- Si lo que interesa es un balance entre la detección de positivos y negativos, lo ideal es usar f1-score.  
 
 ## Reflexión
 

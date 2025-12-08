@@ -33,9 +33,9 @@ El objetivo fue aplicar Transfer Learning utilizando un modelo preentrenado en I
 - Las imágenes fueron **redimensionadas a 224×224 píxeles** y normalizadas en el rango [0,1].
 - Las etiquetas se codificaron mediante *one-hot encoding*.
 - Se realizó una división del dataset en:
-  - **Entrenamiento:** 80%
-  - **Validación:** 10%
-  - **Prueba:** 10%
+  - Entrenamiento: 80%
+  - Validación: 10%
+  - Prueba: 10%
 
 Se aplicaron técnicas de **data augmentation**:
 - Rotaciones aleatorias
@@ -137,10 +137,10 @@ Si un modelo predice sin explicación, puede dar resultados erróneos o inconsis
 
 ### 5. Mejoras
 Si se contara con más tiempo y recursos, se podrían implementar:
-- **Fine-tuning** parcial de capas superiores.  
-- **Más épocas de entrenamiento** con *early stopping*.  
-- **Reducción del learning rate**.  
-- **Aumento del dataset** o uso de *pretraining específico* en datasets de flores.  
+- Fine-tuning parcial de capas superiores.  
+- Más épocas de entrenamiento con *early stopping*.  
+- Reducción del learning rate.  
+- Aumento del dataset o uso de *pretraining específico* en datasets de flores.  
 
 ---
 

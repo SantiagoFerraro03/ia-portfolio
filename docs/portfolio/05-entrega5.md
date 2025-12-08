@@ -374,9 +374,9 @@ print(f"\nModelo final optimizado: {final_scores.mean():.4f} ± {final_scores.st
 Tiene **4424 muestras** y **36 características**.
 
 ***¿Qué tipos de variables incluye? (demográficas, académicas, socioeconómicas)***  
-- **Académicas:** Calificaciones, cursos, carrera, evaluaciones, etc.  
-- **Demográficas:** Edad, sexo, estado civil, nacionalidad, etc.  
-- **Socioeconómicas:** Ocupación de padres.  
+- Académicas: Calificaciones, cursos, carrera, evaluaciones, etc.  
+- Demográficas: Edad, sexo, estado civil, nacionalidad, etc.  
+- Socioeconómicas: Ocupación de padres.  
 
 Lista de variables:  
 `['Marital Status', 'Application mode', 'Application order', 'Course', 'Daytime/evening attendance', 'Previous qualification', 'Previous qualification (grade)', 'Nacionality', "Mother's qualification", "Father's qualification", "Mother's occupation", "Father's occupation", 'Admission grade', 'Displaced', 'Educational special needs', 'Debtor', 'Tuition fees up to date', 'Gender', 'Scholarship holder', 'Age at enrollment', 'International', 'Curricular units 1st sem (credited)', 'Curricular units 1st sem (enrolled)', 'Curricular units 1st sem (evaluations)', 'Curricular units 1st sem (approved)', 'Curricular units 1st sem (grade)', 'Curricular units 1st sem (without evaluations)', 'Curricular units 2nd sem (credited)', 'Curricular units 2nd sem (enrolled)', 'Curricular units 2nd sem (evaluations)', 'Curricular units 2nd sem (approved)', 'Curricular units 2nd sem (grade)', 'Curricular units 2nd sem (without evaluations)', 'Unemployment rate', 'Inflation rate', 'GDP']`
@@ -386,27 +386,27 @@ Hay **3 clases** que están desbalanceadas. Esto ocurre cuando una o varias clas
 
 ***¿Qué significan las 3 categorías objetivo?***  
 Representan el estado final del estudiante al terminar el curso. Son las categorías que queremos predecir:  
-- **Dropout**  
-- **Enrolled**  
-- **Graduate**
+- Dropout  
+- Enrolled  
+- Graduate
 
 ---
 
 ## ¿Qué significan las métricas de validación?
 
-- **Cross-Validation:** Técnica que divide los datos en *k* partes para entrenar y evaluar múltiples veces.  
-- **Accuracy promedio:** Estimación media del rendimiento esperado en datos nuevos.  
-- **Desviación estándar:** Indica qué tan consistente es el modelo entre diferentes divisiones de datos.  
-- **StratifiedKFold:** Mantiene la proporción de clases en cada *fold*, especialmente importante en datasets desbalanceados.  
+- Cross-Validation: Técnica que divide los datos en *k* partes para entrenar y evaluar múltiples veces.  
+- Accuracy promedio: Estimación media del rendimiento esperado en datos nuevos.  
+- Desviación estándar: Indica qué tan consistente es el modelo entre diferentes divisiones de datos.  
+- StratifiedKFold: Mantiene la proporción de clases en cada *fold*, especialmente importante en datasets desbalanceados.  
 
 ---
 
 ## ¿Cuándo usar cada método?
 
-- **GridSearchCV:** Cuando tienes pocos hiperparámetros y suficiente tiempo de cómputo.  
-- **RandomizedSearchCV:** Cuando tienes muchos hiperparámetros o poco tiempo disponible.  
-- **Pipeline + SearchCV:** Siempre, ya que previene *data leakage* automáticamente.  
-- **cross_val_score:** En el resultado final, para validar que la optimización no causó sobreajuste (*overfitting*).  
+- GridSearchCV: Cuando tienes pocos hiperparámetros y suficiente tiempo de cómputo.  
+- RandomizedSearchCV: Cuando tienes muchos hiperparámetros o poco tiempo disponible.  
+- Pipeline + SearchCV: Siempre, ya que previene *data leakage* automáticamente.  
+- cross_val_score: En el resultado final, para validar que la optimización no causó sobreajuste (*overfitting*).  
 
 ---
 
@@ -419,12 +419,12 @@ Es cuando el modelo accede a información de la parte de testing, o a *features*
 Es peligroso porque el modelo puede sobreajustarse y, aunque muestre buen rendimiento en entrenamiento, luego falle con datos nuevos y desconocidos.  
 
 ***¿Cuándo usar KFold vs StratifiedKFold?***  
-- Si las clases están balanceadas → usar **KFold**.  
-- Si hay clases desbalanceadas → usar **StratifiedKFold**, ya que mantiene la proporción de clases en cada fold.  
+- Si las clases están balanceadas → usar KFold.  
+- Si hay clases desbalanceadas → usar StratifiedKFold, ya que mantiene la proporción de clases en cada fold.  
 
 ***¿Cómo interpretar "95.2% ± 2.1%" en cross-validation?***  
-- **95.2%** es el *accuracy promedio*.  
-- **± 2.1%** es la variabilidad entre los *folds*.  
+- 95.2% es el *accuracy promedio*.  
+- ± 2.1% es la variabilidad entre los *folds*.  
 Esto indica buena precisión promedio y resultados consistentes entre folds.  
 
 ***¿Por qué Random Forest no necesita StandardScaler?***  

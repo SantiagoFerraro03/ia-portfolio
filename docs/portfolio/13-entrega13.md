@@ -6,15 +6,15 @@
 ## Contexto
 
 En esta actividad se trabajó con el dataset **zeroshot/twitter-financial-news-sentiment** de Hugging Face, que contiene aproximadamente 12.000 tweets financieros anotados en **tres clases**:  
-- **0 = Bearish**,  
-- **1 = Bullish**,  
-- **2 = Neutral**.
+- 0 = Bearish,  
+- 1 = Bullish,  
+- 2 = Neutral.
 
 El objetivo fue realizar **análisis exploratorio (EDA)**, construir un **baseline clásico** (TF-IDF + LR) y finalmente aplicar **fine-tuning de un modelo Transformer** (FinBERT y alternativas) para comparar el rendimiento entre enfoques tradicionales y modelos preentrenados.
 
 ## Objetivos
 
-- Cargar y preprocesar datasets de texto con **datasets** y tokenizers.  
+- Cargar y preprocesar datasets de texto con datasets y tokenizers.  
 - Realizar EDA: distribución de clases, longitudes, n-grams, wordclouds, proyecciones TF-IDF y Word2Vec.  
 - Implementar un baseline con vectores TF-IDF y regresión logística.  
 - Aplicar fine-tuning de un modelo Transformer (FinBERT).  

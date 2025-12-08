@@ -95,7 +95,7 @@ Parece que el modelo transferido no sobreajustó, simplemente no aprendió patro
 
 - El Transfer Learning *no siempre garantiza mejor rendimiento*, especialmente cuando el modelo base fue entrenado en un dominio visual muy distinto, las imágenes tienen resoluciones mucho más pequeñas y no se realiza fine-tuning
 
-La *CNN simple fue claramente la mejor opción, alcanzando *~70% de accuracy**, lo cual es razonable para una arquitectura básica en CIFAR-10.
+La *CNN simple fue claramente la mejor opción, alcanzando **~70% de accuracy**, lo cual es razonable para una arquitectura básica en CIFAR-10.
 
 - Si se quisiera mejorar el Transfer Learning, sería recomendable:
   - *Aumentar el tamaño de entrada a 96×96 o 128×128*

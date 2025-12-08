@@ -11,7 +11,7 @@ En este laboratorio trabajé con **Vertex AI Pipelines**, la herramienta de Goog
 
 - Crear y ejecutar un pipeline básico de tres pasos usando el SDK de Kubeflow Pipelines (KFP).
 - Construir un pipeline completo de clasificación tabular usando AutoML.
-- Aprovechar componentes prearmados del paquete **google_cloud_pipeline_components**.
+- Aprovechar componentes prearmados del paquete google_cloud_pipeline_components.
 - Agregar lógica condicional para decidir automáticamente si un modelo se despliega o no.
 - Comparar ejecuciones y revisar métricas entre distintos runs.
 
@@ -32,16 +32,16 @@ En este laboratorio trabajé con **Vertex AI Pipelines**, la herramienta de Goog
 
 Arranqué creando una instancia nueva de JupyterLab desde Vertex AI Workbench. Instalé:
 
-- **kfp** (para definir pipelines)  
-- **google-cloud-pipeline-components**  
-- **google-cloud-aiplatform**  
+- kfp (para definir pipelines)  
+- google-cloud-pipeline-components  
+- google-cloud-aiplatform  
 
 Después del restart del kernel configuré las variables principales como **PROJECT_ID** y **BUCKET_NAME**, que usé para guardar artefactos y outputs.
 
 #### Reflexión
 
-- **Dependencias:** Aparecieron algunos warnings de compatibilidad. Nada grave, pero en un proyecto real lo solucionaría con entornos más controlados (virtualenv/conda o imágenes Docker).
-- **Bucket:** Tener el bucket bien definido desde el principio simplifica todo, porque los pipelines van a dejar ahí prácticamente todo lo que generan.
+- Dependencias: Aparecieron algunos warnings de compatibilidad. Nada grave, pero en un proyecto real lo solucionaría con entornos más controlados (virtualenv/conda o imágenes Docker).
+- Bucket: Tener el bucket bien definido desde el principio simplifica todo, porque los pipelines van a dejar ahí prácticamente todo lo que generan.
 
 ---
 
@@ -51,11 +51,11 @@ El primer ejercicio fue armar un pipeline pequeño para entender cómo KFP convi
 
 Los tres pasos fueron:
 
-1. **product_name** — toma un texto y lo devuelve.  
-2. **emoji** — convierte una palabra tipo “sparkles” en ✨.  
-3. **build_sentence** — junta las salidas y arma una frase.
+1. product_name — toma un texto y lo devuelve.  
+2. emoji — convierte una palabra tipo “sparkles” en ✨.  
+3. build_sentence — junta las salidas y arma una frase.
 
-Lo importante acá fue ver cómo el decorador **@component** envuelve cada función en un contenedor independiente, con sus propias dependencias. Esto facilita mucho cuando cada paso necesita un entorno distinto.
+Lo importante acá fue ver cómo el decorador @component envuelve cada función en un contenedor independiente, con sus propias dependencias. Esto facilita mucho cuando cada paso necesita un entorno distinto.
 
 Compilé el pipeline a JSON, lo subí a Vertex AI Pipelines y vi el grafo ejecutándose en tiempo real. El resultado final fue: **"Vertex AI Pipelines is ✨"**.
 
@@ -64,8 +64,8 @@ Compilé el pipeline a JSON, lo subí a Vertex AI Pipelines y vi el grafo ejecut
 
 #### Reflexión
 
-- **Componentización:** Convertir funciones sueltas en componentes reutilizables hace que los pipelines sean más mantenibles.
-- **UI de Vertex AI:** Ver el grafo correr paso por paso ayuda muchísimo cuando algo falla. Es más visual que leer logs crudos.
+- Componentización: Convertir funciones sueltas en componentes reutilizables hace que los pipelines sean más mantenibles.
+- UI de Vertex AI: Ver el grafo correr paso por paso ayuda muchísimo cuando algo falla. Es más visual que leer logs crudos.
 
 ---
 
@@ -73,19 +73,19 @@ Compilé el pipeline a JSON, lo subí a Vertex AI Pipelines y vi el grafo ejecut
 
 El segundo pipeline ya fue de verdad “realista”. Entrené un modelo de clasificación usando AutoML y armé un flujo completo:
 
-1. **Carga de datos (TabularDatasetCreateOp)**  
+1. Carga de datos (TabularDatasetCreateOp)  
    Importé datos desde BigQuery.
 
-2. **Entrenamiento con AutoML (AutoMLTabularTrainingJobRunOp)**  
+2. Entrenamiento con AutoML (AutoMLTabularTrainingJobRunOp)  
    Definí transformaciones, presupuesto de entrenamiento y métricas objetivo.
 
-3. **Evaluación del modelo (componente propio)**  
+3. Evaluación del modelo (componente propio)  
    - Extrajo métricas.  
    - Mostró ROC y matriz de confusión.  
    - Comparó el AUC con un umbral (0.95).  
 
-4. **Despliegue condicional**  
-   Si el AUC superaba el umbral, el modelo se desplegaba automáticamente con **ModelDeployOp**.
+4. Despliegue condicional  
+   Si el AUC superaba el umbral, el modelo se desplegaba automáticamente con ModelDeployOp.
 
 Mientras AutoML entrenaba, pude ver cómo Vertex AI manejaba todas las transformaciones y el tuning sin que yo escribiera casi nada de código manual.
 
@@ -93,9 +93,9 @@ Mientras AutoML entrenaba, pude ver cómo Vertex AI manejaba todas las transform
 
 #### Reflexión
 
-- **AutoML:** Para prototipar es excelente. Te permite validar ideas sin invertir tiempo en feature engineering o tuning profundo.
-- **Condicionales:** El **dsl.Condition()** le da inteligencia al pipeline. Podría usarse para automatizar reentrenamientos, alertas o decisiones de despliegue.
-- **Linaje:** Poder rastrear de qué dataset salió cada modelo o experimento es súper útil cuando se auditan resultados o se necesita reproducibilidad.
+- AutoML: Para prototipar es excelente. Te permite validar ideas sin invertir tiempo en feature engineering o tuning profundo.
+- Condicionales: El dsl.Condition() le da inteligencia al pipeline. Podría usarse para automatizar reentrenamientos, alertas o decisiones de despliegue.
+- Linaje: Poder rastrear de qué dataset salió cada modelo o experimento es súper útil cuando se auditan resultados o se necesita reproducibilidad.
 
 ---
 
@@ -118,10 +118,10 @@ Mientras AutoML entrenaba, pude ver cómo Vertex AI manejaba todas las transform
 
 ## Observaciones finales
 
-1. **Infraestructura como código:** Con KFP todo queda versionado y reproducible.  
-2. **Control de costos:** Los pipelines dejan claro qué recursos consume cada paso.  
-3. **Monitoreo:** Vertex AI ofrece dashboards y linaje sin hacer nada extra.  
-4. **Escalabilidad:** El mismo pipeline funciona igual con datos chicos o gigantes, solo cambian los recursos que asignás.
+1. Infraestructura como código: Con KFP todo queda versionado y reproducible.  
+2. Control de costos: Los pipelines dejan claro qué recursos consume cada paso.  
+3. Monitoreo: Vertex AI ofrece dashboards y linaje sin hacer nada extra.  
+4. Escalabilidad: El mismo pipeline funciona igual con datos chicos o gigantes, solo cambian los recursos que asignás.
 
 ---
 

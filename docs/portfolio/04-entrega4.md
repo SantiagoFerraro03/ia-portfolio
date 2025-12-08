@@ -222,18 +222,18 @@ for i in range(5):
 ## Investigación de Métricas
 
 ### Métricas de Regresión
-- **MAE (Mean Absolute Error):** Promedio de los errores absolutos sin importar si son positivos o negativos.  
-- **MSE (Mean Squared Error):** Promedio de los errores al cuadrado, penaliza más los errores grandes.  
-- **RMSE (Root Mean Squared Error):** Raíz cuadrada del MSE, vuelve a las unidades originales del problema.  
-- **R² (Coeficiente de Determinación):** Indica qué porcentaje de la varianza es explicada por el modelo (0–1, donde 1 es perfecto).  
-- **MAPE (Mean Absolute Percentage Error):** Error porcentual promedio, útil para comparar modelos con diferentes escalas.  
+- MAE (Mean Absolute Error): Promedio de los errores absolutos sin importar si son positivos o negativos.  
+- MSE (Mean Squared Error): Promedio de los errores al cuadrado, penaliza más los errores grandes.  
+- RMSE (Root Mean Squared Error): Raíz cuadrada del MSE, vuelve a las unidades originales del problema.  
+- R² (Coeficiente de Determinación): Indica qué porcentaje de la varianza es explicada por el modelo (0–1, donde 1 es perfecto).  
+- MAPE (Mean Absolute Percentage Error): Error porcentual promedio, útil para comparar modelos con diferentes escalas.  
 
 ### Métricas de Clasificación
-- **Accuracy:** Porcentaje de predicciones correctas sobre el total.  
-- **Precision:** De todas las predicciones positivas, ¿cuántas fueron realmente correctas?  
-- **Recall (Sensibilidad):** De todos los casos positivos reales, ¿cuántos detectamos?  
-- **F1-Score:** Promedio armónico entre *precision* y *recall*.  
-- **Matriz de Confusión:** Tabla que muestra predicciones vs valores reales.  
+- Accuracy: Porcentaje de predicciones correctas sobre el total.  
+- Precision: De todas las predicciones positivas, ¿cuántas fueron realmente correctas?  
+- Recall (Sensibilidad): De todos los casos positivos reales, ¿cuántos detectamos?  
+- F1-Score: Promedio armónico entre *precision* y *recall*.  
+- Matriz de Confusión: Tabla que muestra predicciones vs valores reales.  
 
 ---
 

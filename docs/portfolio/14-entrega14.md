@@ -9,9 +9,9 @@ En esta actividad se trabajó con **LangChain + OpenAI** para explorar el flujo 
 
 ## Objetivos
 
-- Instanciar modelos OpenAI con **ChatOpenAI** y controlar **temperature**, **max_tokens** y **top_p**.  
-- Diseñar prompts robustos con **ChatPromptTemplate** y componerlos con LCEL (**|**).  
-- Generar salidas estructuradas usando **with_structured_output** (JSON/Pydantic).  
+- Instanciar modelos OpenAI con ChatOpenAI y controlar temperature, max_tokens y top_p.  
+- Diseñar prompts robustos con ChatPromptTemplate y componerlos con LCEL (|).  
+- Generar salidas estructuradas usando with_structured_output (JSON/Pydantic).  
 - Medir tokens y latencia con LangSmith (tracing y callbacks).  
 - Implementar tareas guiadas: traducción determinista, resúmenes, Q&A condicionado al contexto.  
 - Comparar enfoques zero-shot vs few-shot.  
@@ -108,7 +108,7 @@ modelo en su ser.
 ### Respuestas a las preguntas
 
 **combinación que da claridad vs creatividad**  
-- Para la claridad la mejor combinación fue **Temp 0.0 + top_p 1.0**, porque genera un haiku más preciso, directo y consistente entre ejecuciones. El contenido es más “fijo”.  **Temp 0.5 + top_p 0.9** es donde aparece algo de variación pero sin perder coherencia. Y **Temp 0.9 + top_p 0.7** produce frases más libres, y asociaciones menos literales.
+- Para la claridad la mejor combinación fue Temp 0.0 + top_p 1.0, porque genera un haiku más preciso, directo y consistente entre ejecuciones. El contenido es más “fijo”.  Temp 0.5 + top_p 0.9 es donde aparece algo de variación pero sin perder coherencia. Y Temp 0.9 + top_p 0.7 produce frases más libres, y asociaciones menos literales.
 
 **Impacto de estos parámetros en tareas “cerradas”**  
 - Temperature bajo (0.0–0.2): ideal para tareas cerradas porque reduce la variabilidad y aumenta la precisión.
@@ -382,14 +382,14 @@ Processing: What integrations does Product X support?
 
 ### Instrucciones de Configuración
 
-- **Ejecutar Todas las Celdas**: Ejecuta el notebook de arriba a abajo
-- **Probar**: El script prueba automáticamente 3 preguntas de ejemplo
+- Ejecutar Todas las Celdas: Ejecuta el notebook de arriba a abajo
+- Probar: El script prueba automáticamente 3 preguntas de ejemplo
 
 ### Personalización
 
-- **Agregar más FAQs**: Extiende la lista **faq_documents**
-- **Ajustar umbral**: Cambia el umbral de 50 caracteres para activar búsqueda web
-- **Modificar salida**: Actualiza el modelo Pydantic **BotResponse**
+- Agregar más FAQs: Extiende la lista faq_documents
+- Ajustar umbral: Cambia el umbral de 50 caracteres para activar búsqueda web
+- Modificar salida: Actualiza el modelo Pydantic BotResponse
 
 ## Evidencias
 - [Collab](https://colab.research.google.com/drive/1MIwekmPWzHJyxlHs5u_SddaeWs-FOpdp?usp=sharing)
